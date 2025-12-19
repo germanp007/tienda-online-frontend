@@ -1,6 +1,6 @@
 import { lazy } from "react";
 
-import { createBrowserRouter, Navigate } from "react-router";
+import { createHashRouter, Navigate } from "react-router";
 import ShopLayout from "../shop/layouts/ShopLayout";
 import HomePage from "../shop/pages/HomePage";
 import ProductPage from "../shop/pages/ProductPage";
@@ -21,7 +21,7 @@ import { IsAdminRoute, NotAuthenticatedRoute } from "./routes/ProtectedRoutes";
 const AuthLayout = lazy(() => import("../auth/layouts/AuthLayout"));
 const AdminLayout = lazy(() => import("../admin/layouts/AdminLayout"));
 
-const appRouter = createBrowserRouter([
+const appRouter = createHashRouter([
   // Public Routes
   {
     path: "/",
