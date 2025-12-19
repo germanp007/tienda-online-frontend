@@ -1,5 +1,5 @@
 import { tesloApi } from "@/api/teslo.api"
-import type { ProductsResponse } from "@/shop/actions/types/products.response";
+import type { ProductsResponse } from "@/interfaces/product.response";
 
 
 interface Options {

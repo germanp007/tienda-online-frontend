@@ -1,18 +1,18 @@
  
-import { useNavigate, useParams } from 'react-router'; 
+import { Navigate, useNavigate, useParams } from 'react-router'; 
 import useProduct from '@/admin/hooks/useProduct';
 import FullScreenLoading from '@/components/custom/FullScreenLoading';
-import ProductForm from './components/ProductForm';
-import type { ProducSubtitle, Product, ProducTitle } from '@/admin/actions/types/adminTypes';
+import ProductForm from './components/ProductForm'; 
 import { toast } from 'sonner';
+import type { Product } from '@/interfaces/product.interface';
 
 export const AdminProductPage = () => {
   const { id } = useParams();
   const navigate = useNavigate()
   const { isError, isLoading, data: product, mutation } = useProduct( id || '');
 
-  const productTitle:ProducTitle = id === 'new' ? 'Nuevo producto' : 'Editar producto';
-  const productSubtitle:ProducSubtitle =
+  const productTitle= id === 'new' ? 'Nuevo producto' : 'Editar producto';
+  const productSubtitle =
     id === 'new'
       ? 'Aquí puedes crear un nuevo producto.'
       : 'Aquí puedes editar el producto.';
@@ -35,9 +35,9 @@ export const AdminProductPage = () => {
   }
  
 
-  if(isError){
-    return navigate('/admin/products')
-  };
+  if (isError) {
+  return <Navigate to="/admin/products" replace />;
+}
 
   if(isLoading){
 

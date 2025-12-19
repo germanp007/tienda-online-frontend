@@ -12,7 +12,8 @@ export const registerAction = async(email:string,password:string,fullName:string
         });
         return data
     } catch (error) {
-        return error
+       console.log(error);
+        throw error;
     }
 
 }

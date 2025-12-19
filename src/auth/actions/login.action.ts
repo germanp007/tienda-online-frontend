@@ -11,7 +11,8 @@ export const loginAction = async(email:string, password:string):Promise<AuthResp
         });  
          return data
     } catch (error) {
-       return error
+       console.log(error);
+        throw error;
     }
 }
  

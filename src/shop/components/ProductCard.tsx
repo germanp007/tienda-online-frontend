@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import type { Size } from "@/shop/actions/types/product.interface";
+import type { Size } from "@/interfaces/product.interface";
 import { Link } from "react-router";
 
 interface ProductCardProps {

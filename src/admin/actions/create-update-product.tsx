@@ -1,5 +1,5 @@
 import { tesloApi } from "@/api/teslo.api";
-import type { Product } from "./types/adminTypes";
+import type { Product } from "@/interfaces/product.interface";
 import { sleep } from "@/lib/sleep";
 
 

@@ -1,8 +1,6 @@
-import type {
-  ProducSubtitle,
-  Product,
-  ProducTitle,
-} from "@/admin/actions/types/adminTypes";
+import type { 
+  Product, 
+} from "@/interfaces/product.interface";
 import { useForm } from "react-hook-form";
 import AdminTitle from "@/admin/components/AdminTitle";
 import { Button } from "@/components/ui/button";
@@ -13,8 +11,8 @@ import { cn } from "@/lib/utils";
 import type { Size } from "@/shop/actions/types/product.interface";
 
 interface Props {
-  productTitle: ProducTitle;
-  productSubtitle: ProducSubtitle;
+  productTitle:string;
+  productSubtitle:string;
   product: Product;
   isPending: boolean;
   onSubmit: (productLike: Partial<Product> & {file?: File[] })=> Promise<void>
