@@ -8,7 +8,7 @@ import { Plus, SaveAll, Tag, Upload, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import type { Size } from "@/shop/actions/types/product.interface";
+import type { Size } from "@/interfaces/product.interface";
 
 interface Props {
   productTitle:string;
